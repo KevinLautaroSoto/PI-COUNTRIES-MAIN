@@ -1,0 +1,21 @@
+.paginado {
+  list-style-type: none;
+  padding: 0;
+}
+
+.number {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 10px; /* Agrega un padding para dar espacio al contenido del botón */
+  background-color: #8B4513; /* Color de fondo similar a la madera */
+  border: none; /* Quita el borde por defecto */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra para dar profundidad */
+  color: #fff; /* Cambia el color de texto a blanco */
+  font-weight: bold; /* Agrega negrita al texto */
+  cursor: pointer; /* Cambia el cursor al pasar el cursor por encima */
+  transition: background-color 0.3s ease-in-out; /* Agrega una transición suave al cambiar el color de fondo */
+}
+
+.number:hover {
+  background-color: #A0522D; /* Cambia el color de fondo al pasar el cursor por encima */
+}

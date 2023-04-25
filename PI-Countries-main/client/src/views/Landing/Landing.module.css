@@ -1,0 +1,41 @@
+.mainContent{
+    background-image: url("https://img.freepik.com/vector-gratis/concepto-cartografia-mapa-mundial-vintage_52683-26377.jpg?w=900&t=st=1682373200~exp=1682373800~hmac=94db521de573170f1b1bec4e71b1d0677646a5a582551fe9d44bd97132ced1b8");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+};
+
+.title {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    /* Estilos para el aspecto de letras escritas a mano o marcas en un mapa */
+    /* Puedes ajustar estos estilos para que se ajusten a tus preferencias */
+    color: #000;
+    text-shadow: 2px 2px #fff; 
+}
+
+.button{
+    background-color: #f8e4c9;
+    color: #8a6642;
+    border: rgb(158, 103, 21);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: "Times New Roman", serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0.8;
+}
+
+.button:hover {
+    opacity: 1;
+    border-color: black;
+}
+
+
+/* background-image: url("https://img.freepik.com/vector-gratis/concepto-cartografia-mapa-mundial-vintage_52683-26377.jpg?w=900&t=st=1682373200~exp=1682373800~hmac=94db521de573170f1b1bec4e71b1d0677646a5a582551fe9d44bd97132ced1b8"); */
