@@ -1,8 +1,8 @@
 .mainContent{
-    background-image: url("https://img.freepik.com/vector-gratis/concepto-cartografia-mapa-mundial-vintage_52683-26377.jpg?w=900&t=st=1682373200~exp=1682373800~hmac=94db521de573170f1b1bec4e71b1d0677646a5a582551fe9d44bd97132ced1b8");
+    background-image: url("https://img.freepik.com/vector-gratis/concepto-cartografia-mapa-mundial-vintage_52683-26377.jpg?w=900&t=st=1682373200~exp=1682373800~hmac=94db521de573170f1b1bec4e71b1d0677646a5a582551fe9d44bd97132ced1b8"); 
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh; 
+    height: 750px; 
     width: 100%; 
     display: flex; 
     justify-content: center; 

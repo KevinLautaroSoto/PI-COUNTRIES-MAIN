@@ -22,7 +22,7 @@ const { conn } = require('./src/db.js');
 const saveCountriesDb = require("./src/controllers/saveApiCountries.js")
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ alter: true }).then(() => {
   //aca va la funcion que me cargara los datos de la api:
   console.log("db conectada");
   saveCountriesDb(); 

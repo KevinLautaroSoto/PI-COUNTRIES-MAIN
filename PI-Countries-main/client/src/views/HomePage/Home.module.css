@@ -1,0 +1,9 @@
+.title {
+  background-color: #8B4513; /* Color de fondo similar a la madera */
+  color: #fff; /* Color de texto en blanco */
+  font-size: 36px; /* Tamaño de fuente del título */
+  padding: 10px 20px; /* Agrega espacio de relleno para dar espacio al contenido del título */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Agrega una sombra para dar profundidad */
+  border: 1px solid #A0522D; /* Agrega un borde que simula las vetas de la madera */
+  border-radius: 5px; /* Agrega bordes redondeados para suavizar la apariencia */
+}
