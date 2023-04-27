@@ -1,9 +1,72 @@
 .title {
-  background-color: #8B4513; /* Color de fondo similar a la madera */
-  color: #fff; /* Color de texto en blanco */
-  font-size: 36px; /* Tamaño de fuente del título */
-  padding: 10px 20px; /* Agrega espacio de relleno para dar espacio al contenido del título */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Agrega una sombra para dar profundidad */
-  border: 1px solid #A0522D; /* Agrega un borde que simula las vetas de la madera */
-  border-radius: 5px; /* Agrega bordes redondeados para suavizar la apariencia */
+  font-size: 35px;
+  padding: 5px; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px; 
+  text-align: center;
+  margin-left:35%;
+  margin-right: 35%;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 
+               2px 2px 2px rgba(0, 0, 0, 0.3), 
+               3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.utilities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: #fffefe;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.utilities input[type="search"] {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #aaa;
+  color: #333;
+  font-size: 16px;
+  width: 200px;
+}
+
+.utilities input[type="search"]::placeholder {
+  color: #aaa;
+}
+
+.utilities button[type="button"] {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.utilities button[type="button"]:hover {
+  background-color: #d8d6d6;
+  color: #000000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.utilities select {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #aaa;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.utilities select:focus {
+  outline: none;
+  border-bottom: 2px solid #00ffff;
 }

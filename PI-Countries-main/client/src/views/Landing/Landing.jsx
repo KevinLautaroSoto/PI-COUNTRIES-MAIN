@@ -4,7 +4,6 @@ import style from "./Landing.module.css";
 const Landing = () => {
     return (
         <div className={style.mainContent}>
-            <h1 className={style.title}>Paises del Mundo</h1>
             <Link to="/home">
                 <button className={style.button}>Explorar</button>
             </Link>

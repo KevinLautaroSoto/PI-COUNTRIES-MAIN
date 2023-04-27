@@ -1,41 +1,57 @@
-.mainContent{
-    background-image: url("https://img.freepik.com/vector-gratis/concepto-cartografia-mapa-mundial-vintage_52683-26377.jpg?w=900&t=st=1682373200~exp=1682373800~hmac=94db521de573170f1b1bec4e71b1d0677646a5a582551fe9d44bd97132ced1b8"); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 750px; 
-    width: 100%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column;
-};
-
-.title {
-    font-family: "Times New Roman", sans-serif;
-    font-size: 24px;
-    font-style: italic;
-    /* Estilos para el aspecto de letras escritas a mano o marcas en un mapa */
-    /* Puedes ajustar estos estilos para que se ajusten a tus preferencias */
-    color: #000;
-    text-shadow: 2px 2px #fff; 
+.button {
+  background: linear-gradient(to bottom, #333333, #999999);
+  border-radius: 20px;
+  border: none;
+  color: #000;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px;
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #fff;
+  margin-top: 350px;
 }
 
-.button{
-    background-color: #f8e4c9;
-    color: #8a6642;
-    border: rgb(158, 103, 21);
-    padding: 10px 20px;
-    font-size: 18px;
-    font-family: "Times New Roman", serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    opacity: 0.8;
+.button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  z-index: -1;
+  background-color: #00ffff;
+  border-radius: 20px;
 }
 
 .button:hover {
-    opacity: 1;
-    border-color: black;
+  background: linear-gradient(to bottom, #fafafa, #bbbbbb);
+  box-shadow: 0px 0px 10px #00ffff;
 }
+
+.button:active {
+  box-shadow: 0px 0px 5px #00ffff;
+  top: 2px;
+}
+.mainContent{
+    background-image: url("https://images3.alphacoders.com/807/807247.jpg"); 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+};
+
+
 
 
 /* background-image: url("https://img.freepik.com/vector-gratis/concepto-cartografia-mapa-mundial-vintage_52683-26377.jpg?w=900&t=st=1682373200~exp=1682373800~hmac=94db521de573170f1b1bec4e71b1d0677646a5a582551fe9d44bd97132ced1b8"); */
+
+/* https://i.pinimg.com/originals/2c/9f/12/2c9f1211dab6d654a65f733664bde5f4.png foto mapa de letras */
+
+/* https://images6.alphacoders.com/400/400645.jpg mapa de banderas */

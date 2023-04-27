@@ -50,21 +50,20 @@ export const getCountriesByName = (payload) => {
 export const getCountriesById = (id) => {
     return async function (dispatch) {
         await axios(`http://localhost:3001/countries/${id}`)
-        .then((data) => dispatch({
+        .then((info) => dispatch({
             type: GET_COUNTRIES_BY_ID,
-            payload: data.data
+            payload: info.data
         }));
     }
 };
 
 export const getActivities = () => {
     return async function (dispatch) {
-        try {
-            const info = await axios.get("http://localhost:3001/activities")
-            return dispatch({ type: GET_ACTIVITIES, payload: info.data });
-        } catch (error) {
-            return ({error: error.message})
-        }
+        await axios.get("http://localhost:3001/activities")
+            .then((info) => dispatch({
+                type: GET_ACTIVITIES,
+                payload: info.data
+        }))
     }
 };
 

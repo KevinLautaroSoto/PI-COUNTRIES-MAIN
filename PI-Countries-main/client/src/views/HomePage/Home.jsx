@@ -1,7 +1,7 @@
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCountries, filterCountriesByContinent, orderByName, orderByPopulation, getCountriesByName } from "../../redux/actions";
+import { getCountries, filterCountriesByContinent, orderByName, orderByPopulation, getCountriesByName, filterByActivities, getActivities } from "../../redux/actions";
 import Paginado from "../../components/Paginado/Paginado";
 import style from "./Home.module.css";
 
@@ -9,6 +9,7 @@ const Home = () => {
 
     const dispatch = useDispatch();
     const allCountries = useSelector((state) => state.countries);
+    const allActivities = useSelector((state) => state.allActivities);
     const [currentPage, setCurrentPage] = useState(1);//se setea en un 1 para que arranque en la 1 pag siempre
     const [countriesPerPage, setcountriesPerPage] = useState(10)//10 es la cant de paises por pag.
     const [order, setOrder] = useState("");
@@ -24,6 +25,8 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(getCountries());
+        dispatch(getActivities());
+        console.log(allActivities);
     }, [dispatch]); 
 
     const handleChange = (event) => {
@@ -53,10 +56,15 @@ const Home = () => {
         setOrder(`Ordenado ${event.target.value}`);
     };
 
+    const handleFilterByActivities = (event) => {
+        dispatch(filterByActivities(event.target.value));
+        setCurrentPage(1);
+    };
+
     return (
         <>
             <h1 className={style.title} >Paises del mundo</h1>
-            <div>
+            <div className={style.utilities}>
                 <div> 
                     <input type="search"
                         placeholder="Search a country . . ." 
@@ -71,12 +79,12 @@ const Home = () => {
 
                 </div>
                 <select onChange={event => handleOrderByName(event)} >
-                    <option value="ascAlfa" >Alfabetico+</option>
-                    <option value="descAlfa" >Alfabetico-</option>  
+                    <option value="ascAlfa" >A-Z</option>
+                    <option value="descAlfa" >Z-A</option>  
                 </select>
                 <select onChange={event => handleOrderByPopulation(event)} >
-                    <option value="ascPobl" >Poblacion+</option>
-                    <option value="descPobl" >Poblacion-</option>
+                    <option value="ascPobl" >Poblacion +</option>
+                    <option value="descPobl" >Poblacion -</option>
                 </select>
                 <select onChange={event => handleFilterStatus(event)} >
                     <option value="allCont" >Todos</option>
@@ -87,6 +95,11 @@ const Home = () => {
                     <option value="North America" >North America</option>
                     <option value="Oceania" >Oceania</option>
                     <option value="South America" >South America</option>
+                </select>
+                <select onChange={handleFilterByActivities} >
+                    {allActivities.map((activity) => (
+                        <option value={activity.id} >{activity.name}</option>
+                    ))}
                 </select>
             </div>
             <CardsContainer

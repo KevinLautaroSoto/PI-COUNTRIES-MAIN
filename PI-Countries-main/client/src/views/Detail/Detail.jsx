@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCountriesById } from "../../redux/actions";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import styles from "./Detail.module.css";
 
 const Detail = (props) => {
   
@@ -16,20 +17,20 @@ const Detail = (props) => {
 
   console.log(detail);
   return (
-    <div>
-      <div >
-        <p>ID: {detail.id} </p>
-        <p>Name: {detail.name} </p>
-        <img src={detail.flag} alt='flag'/>
-        <p>Continent: {detail.continents} </p>
-        <p>Capital: {detail.capital} </p>
-        <p>Subregion: {detail.subregion} </p>
-        <p>Area: {detail.area} </p>
-        <p>Population: {detail.poblacion} </p>
+      <div className={styles.card} >
+        <div className={styles.flag} >
+          <img src={detail.flag} alt='flag'/>
       </div>
-      
-    </div>
-    
+      <div className={styles.detail} >
+        <p className={styles.text} >ID: {detail.id} </p>
+        <p className={styles.name}>{detail.name}</p>
+        <p className={styles.text}>Continent: {detail.continent}</p>
+        <p className={styles.text}>Capital: {detail.capital}</p>
+        <p className={styles.text}>Subregion: {detail.subregion}</p>
+        <p className={styles.text}>Area: {detail.area}</p>
+        <p className={styles.text}>Population: {detail.population}</p>
+      </div>  
+    </div>    
   )
 }
   

@@ -3,14 +3,7 @@ import { GET_COUNTRIES, FILTER_BY_CONTINENT, FILTER_BY_ACTIVITIES, ORDER_BY_NAME
 const initialState = {
     countries: [],
     allCountries: [],//*1
-    allActivities: [{
-	        name: "correr",
-            difficulty: 3,
-	        duration: "0:4",
-	        season: "winter",
-	        countries: "SVK"
-        }
-    ],
+    allActivities: [],
     detail: [],
 };
 
@@ -92,6 +85,13 @@ const rootReducer = (state = initialState, action) => {
         case "POST_ACTIVITIES":
             return {
                 ...state
+            }
+        case FILTER_BY_ACTIVITIES:
+            const filter = action.payload;
+            const countFiltered = state.allCountries.filter(el => el.activities.some(act => act.id === filter));
+            return {
+                ...state,
+                countries: countFiltered
             }
         default:
             return { ...state };

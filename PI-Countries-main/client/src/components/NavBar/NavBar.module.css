@@ -1,8 +1,34 @@
-.mainContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-radius: 15px;
-    border: 1px;
-    background-color: beige;
-};
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(220.55deg, #565656 0%, #181818 100%);
+  height: 60px;
+}
+
+.NavItem {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #fff;
+  color: #fff;
+}
+
+.NavItem:last-child {
+  border-right: none;
+}
+
+.NavItem a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.NavItem:hover {
+  background-color: #555;
+}
